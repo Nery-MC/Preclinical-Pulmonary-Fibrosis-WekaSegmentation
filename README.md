@@ -41,14 +41,15 @@ Pipeline performs supervised machine-learning–based segmentation of preclinica
 
 ### Step 1: Applying the Trained Classifier
 1. Open ImageJ **BeanShell Script Editor**
-2. Copy and run:
+2. Copy:
    ```
    Select Apply Weka classifier Classifier…txt
    ```
-3. Select:
+3. Past into the BeanShell Scropt Editor and run
+4. Select:
    - Input image folder (e.g. `./images`)
    - Output segmentation folder (e.g. `./segmentations`)
-4. Select the classifier model:
+5. Select the classifier model:
    ```
    classifier_SN_updated.model
    ```
