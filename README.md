@@ -3,6 +3,11 @@
 This repository contains ImageJ/Fiji macros and analysis workflows supporting the paper:
 > **Artificial Intelligence–Based Automated Fibrosis Quantification in Preclinical Models of Pulmonary Fibrosis**
 
+<a href="https://imagej.net/software/fiji/"><img alt="ImageJ/Fiji" src="https://img.shields.io/badge/ImageJ-Fiji-00aaff?logo=imagej&logoColor=white"></a>
+<a href="https://posit.co/download/rstudio-desktop/"><img alt="RStudio" src="https://img.shields.io/badge/RStudio-276DC3?logo=rstudio&logoColor=white"></a>
+<a href="https://www.python.org/downloads/"><img alt="Python" src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white"></a>
+<a href="https://doi.org/10.XXXX/your-paper-doi"><img alt="Paper" src="https://img.shields.io/badge/Paper-PDF-ff69b4?logo=read-the-docs&logoColor=white"></a>
+
 Pipeline performs supervised machine-learning–based segmentation of preclinical mouse lung histology images followed by automated fibrosis percentage quantification and correlation with Ashcroft scoring.
 
 ---
