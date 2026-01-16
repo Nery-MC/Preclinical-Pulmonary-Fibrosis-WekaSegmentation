@@ -19,7 +19,7 @@ Pipeline performs supervised machine-learning–based segmentation of preclinica
 - Alveoli  
 - Fibrosis  
 - Background  
-- Bronchi / Epithelium  
+- Bronchi   
 - Support Collagen  
 - Blood  
 
@@ -39,11 +39,31 @@ Pipeline performs supervised machine-learning–based segmentation of preclinica
 ---
 ## Segmenttion Model
 
+### Preprocessing 
+1. Open the histology image in ImageJ
+2. Annotate artifacts and non-lung tissue ROIs using ImageJ ROI Manager
+3. Save the ROIs as 'non-lung ROIs'
+4. Download and install 'Trainable Weka Segmentation' in ImageJ
+5. Close and restart ImageJ
+
+### Training 
+1. Open histology image in ImageJ
+2. Annotate different tissue classes (e.g Alveoli, Fibrosis, Background, Bronchi, Support Collagen, Blood) using ROI Manager 
+3. Save the ROIs of each class in seperate folders
+4. Open
+   ```
+   ImageJ >> Plugins >> Segmentation >> Trainable Weka Segmentation
+   ```
+5. Load the saved class ROIs and train the Weka classifier
+6. Save the trained model ('classifier.model')
+
+### Testing 
+
 ### Step 1: Applying the Trained Classifier
 1. Open ImageJ **BeanShell Script Editor**
 2. Copy the contents in the .txt file:
    ```
-   Apply Weka classifier Classifier.txt
+   Apply Weka classifier to all images in folder.txt
    ```
 3. Past into the BeanShell Scropt Editor and run
 4. Select:
@@ -51,16 +71,18 @@ Pipeline performs supervised machine-learning–based segmentation of preclinica
    - Output segmentation folder (e.g. `./segmentations`)
 5. Select the classifier model:
    ```
-   classifier_SN_updated.model
+   classifier.model
    ```
 
-### Step 2: Run Quantification Macro
+### Step 2: Run Fibrosis Quantification Macro
 1. Open the macro:
    ```
-   Isolate background delete extra tissue and get values 7C 1-8-21.ijm
+   Isolate_Background_Delete_Extra_Tissue_Get_Values.ijm
    ```
-   (located in `./ScriptsandMacros`)
 2. Update **three file paths** in the script as needed
+    - Input Path (.//images)
+    - Output Path (.//segmentations)
+    - Model Path (.//classifer.model)
 
 #### What the Macro Does
 - Loads pre-defined **non-lung ROIs**
