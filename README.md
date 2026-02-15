@@ -96,3 +96,5 @@ Pipeline performs supervised machine-learning–based segmentation of preclinica
 
 ---
 ## Citation
+
+Roop, B., Calmo, N.M., Bass, A. et al. Artificial intelligence, machine learning-based automated fibrosis quantification in preclinical models of pulmonary fibrosis. Respir Res (2026). https://doi.org/10.1186/s12931-026-03536-2
