@@ -31,10 +31,6 @@ Pipeline performs supervised machine-learning–based segmentation of preclinica
 - **ImageJ/Fiji** 
     - https://imagej.net/software/fiji/
     - Install *Trainable Weka Segmentation* plugin  
-- **R / RStudio** (Correlation Analysis)
-    - Version
-- **Python** (Ripley K Analysis)
-    - Version 3.11.9 
 
 ---
 ## Segmenttion Model
